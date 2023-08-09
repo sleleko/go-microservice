@@ -1,6 +1,6 @@
 FROM golang:1.21
 WORKDIR /app
-COPY service1.go .
+COPY service2.go .
 RUN go mod init service2
 RUN go build -o service2 .
 CMD ["./service2"]
