@@ -1,0 +1,9 @@
+FROM golang:1.21
+
+WORKDIR /app
+
+COPY gateway.go .
+
+RUN go build -o gateway .
+
+CMD ["./gateway"]
