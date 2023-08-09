@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.gateway
+    ports:
+      - "8080:8080"
+
+  service1:
+    build:
+      context: .
+      dockerfile: Dockerfile.service1
+    ports:
+      - "8081:8081"
+
+  service2:
+    build:
+      context: .
+      dockerfile: Dockerfile.service2
+    ports:
+      - "8082:8082"
